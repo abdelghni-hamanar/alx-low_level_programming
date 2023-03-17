@@ -2,8 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 /**
-* main - assigns a random number to int n everytime.
-* it execute, and prints it
+* main - Entry point
+* 
+* This Programe will assigns a random number to int n
+* 
+* the variable n each time it is executed
+* 
 * Return: Always 0 (Success)
 */
 int main(void)
