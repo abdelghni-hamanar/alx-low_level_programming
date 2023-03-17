@@ -1,19 +1,11 @@
-/*
- * File: 0-positive_or_negative.c
- * Auth: Abdelghni Hamanar
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 /**
- * main - Prints a random number and states whether
- *        it is positive, negative, or zero.
- *
- * Return: Always 0.
+* Description: main - prints out a string to stdouEntry point.
+* The Program assigns a random number to int n
+* Return: 0 if success.
 */
-
 int main(void)
 {
 	int n;
