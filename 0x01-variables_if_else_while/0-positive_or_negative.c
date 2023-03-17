@@ -1,15 +1,19 @@
+/*
+ * File: 0-positive_or_negative.c
+ * Auth: Abdelghni Hamanar
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 /**
-* main - Entry point
-* 
-* This Programe will assigns a random number to int n
-* 
-* the variable n each time it is executed
-* 
-* Return: Always 0 (Success)
+ * main - Prints a random number and states whether
+ *        it is positive, negative, or zero.
+ *
+ * Return: Always 0.
 */
+
 int main(void)
 {
 	int n;
