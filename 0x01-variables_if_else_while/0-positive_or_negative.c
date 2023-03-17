@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/*
-* main - assign random number to int n everytime.
-* execute it and print it
-* Return: 0 if success
+/**
+* main - assigns a random number to int n everytime.
+* it execute, and prints it
+* Return: Always 0 (Success)
 */
 int main(void)
 {
