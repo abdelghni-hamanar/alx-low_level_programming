@@ -1,16 +1,19 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
-* main - function print all lower case alphabet followed by new line
-* Return: Always 0 (Success)
+*print_alphabet - prints alphabet
+*Return: No return.
 */
+
 void print_alphabet(void)
 {
-	int a;
+	char a = 'a';
 
-	for (a = 'a'; a <= 'z'; a++)
+	while (a <= 'z')
 	{
-	 putchar(a);
+		printf("%c", a);
+		a++;
 	}
 	putchar('\n');
 }
