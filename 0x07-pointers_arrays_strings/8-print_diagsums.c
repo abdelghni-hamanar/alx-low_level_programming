@@ -1,23 +1,20 @@
 #include "main.h"
 #include <stdio.h>
 /**
-* print_diagsums - a fucntion that print sums each diag
-*of the matrix
-* @a: pointer variable matrix
-* @size: size of matrix
-* Return: void return nothing
-*/
-
+ * print_diagsums - function that prints the sum of the two diagonals
+ *@a: first value -char
+ *@size: second value -int
+ */
 void print_diagsums(int *a, int size)
 {
 	int i;
-	int diag1 = 0;
-	int diag2 = 0;
+	unsigned int diag = 0, diag1 = 0;
 
 	for (i = 0; i < size; i++)
 	{
-		diag1 +=  *(a + i *  size + i);
-		diag2 += *(a + i *  size + (size - 1 - i));
+		diag +=  a[(size * i) + i];
+		diag1 += a[(size * (i + 1)) - (i + 1)];
 	}
-	printf("%d %d\n", diag1, diag2);
+
+	printf("%d %d\n", diag, diag1);
 }
