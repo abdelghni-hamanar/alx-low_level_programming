@@ -17,12 +17,7 @@ void print_diagsums(int *a, int size)
 	for (i = 0; i < size; i++)
 	{
 		diag1 +=  *(a + i *  size + i);
-	}
-
-	for (i = 0; i < size; i++)
-	{
 		diag2 += *(a + i *  size + (size - 1 - i));
 	}
-
 	printf("%d %d\n", diag1, diag2);
 }
