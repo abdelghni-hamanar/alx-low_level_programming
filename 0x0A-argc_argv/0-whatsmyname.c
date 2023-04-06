@@ -11,6 +11,8 @@
 
 int main(int argc, char *argv[])
 {
+	/* we can use near to params argc --attribute__((unused))*/
+	/* we can also use printf("%s\n", *argv); */
 	printf("%s\n", argv[0]);
 	return (0);
 }

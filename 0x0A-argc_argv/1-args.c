@@ -11,6 +11,9 @@
 
 int main(int argc, char *argv[])
 {
+	/* after argv in the params we can use __attribute__((unused)) */
+	/* or we can use it outside when we compile with W flags */
+	/* we can use -Wno-unused-parameter */
 	printf("%d\n", argc - 1);
 
 	return (0);
