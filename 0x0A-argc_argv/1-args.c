@@ -9,7 +9,7 @@
 * Return: Always 0 (Success)
 */
 
-int main(int argc, char *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
 	/* after argv in the params we can use __attribute__((unused)) */
 	/* or we can use it outside when we compile with W flags */
