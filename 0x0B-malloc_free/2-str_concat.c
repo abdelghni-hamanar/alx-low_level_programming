@@ -17,7 +17,6 @@ char *str_concat(char *s1, char *s2)
 
 	while (s1[len1] && s1)
 		len1++;
-
 	while (s2[len2] && s2)
 		len2++;
 
@@ -35,7 +34,6 @@ char *str_concat(char *s1, char *s2)
 			i++;
 		}
 	}
-
 	if (s2)
 	{
 		while (i < (len1 + len2))
@@ -45,8 +43,6 @@ char *str_concat(char *s1, char *s2)
 			i++;
 		}
 	}
-
 	s3[i] = '\0';
-
 	return (s3);
 }
