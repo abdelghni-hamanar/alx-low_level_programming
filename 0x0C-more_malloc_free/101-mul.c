@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,10 +18,11 @@ void _errors(void);
 
 int main(int argc, char *argv[])
 {
-	char *s1 = argv[1], *s2 = argv[2];
-	int len1, len2, len, *result, a = 0;
-	int  digit1, digit2, carry, i;
+	char *s1, *s2;
+	int len1, len2, len, *result, a = 0, digit1, digit2, carry, i;
 
+	s1 = argv[1];
+	s2 = argv[2];
 	if (argc != 3 || !_digit(s1) || !_digit(s2))
 		_errors();
 
