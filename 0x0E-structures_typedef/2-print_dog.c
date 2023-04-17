@@ -6,7 +6,7 @@
 /**
 * print_dog - Entry point
 * @d: variable
-* Return: pointer if Success, and NULL if Not
+* Return: void
 */
 
 
@@ -21,5 +21,5 @@ void print_dog(struct dog *d)
 	if (d->owner == NULL)
 		d->owner = "(nil)";
 
-	printf("Name: %s\nage: %f\nOwner: %s\n", d->name, d->age, d->owner);
+	printf("Name: %s\nAge: %f\nOwner: %s\n", d->name, d->age, d->owner);
 }
