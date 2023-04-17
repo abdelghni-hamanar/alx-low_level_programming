@@ -2,13 +2,13 @@
 #define DOG_H
 
 /**
-* struct dog - a dog into
-* @name: dog name
-* @age: dog age
-* @owner: owner dog name
-*
-* Description: best description
-*/
+ * struct dog - a dog into
+ * @name: dog name
+ * @age: dog age
+ * @owner: owner dog name
+ *
+ * Description: best description
+ */
 
 struct dog
 {
@@ -19,8 +19,8 @@ struct dog
 };
 
 /**
-* dog_t - typedef for struct
-*/
+ * dog_t - typedef for struct
+ */
 
 typedef struct dog dog_t;
 
