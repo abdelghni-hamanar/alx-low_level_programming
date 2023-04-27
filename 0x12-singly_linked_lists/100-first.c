@@ -1,5 +1,7 @@
 #include "lists.h"
 
+void the_one(void)__attribute__ ((constructor));
+
 /* By Abdelghni Hamanar */
 /**
  * the_one - Entry point
