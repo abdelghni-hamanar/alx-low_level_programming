@@ -1,14 +1,14 @@
 #include "lists.h"
 
-void the_one(void) __attribute__ ((constructor));
+void first(void) __attribute__ ((constructor));
 
 /* By Abdelghni Hamanar */
 /**
- * the_one - Entry point
+ * first - Entry point
  * Return: void
  */
 
-void the_one(void)
+void first(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n ");
