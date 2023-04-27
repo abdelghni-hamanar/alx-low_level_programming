@@ -1,6 +1,6 @@
 #include "lists.h"
 
-void the_one(void)__attribute__ ((constructor));
+void the_one(void) __attribute__ ((constructor));
 
 /* By Abdelghni Hamanar */
 /**
