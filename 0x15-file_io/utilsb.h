@@ -1,10 +1,14 @@
+#ifndef UTILSB_H
+#define UTILSB_H
+
 #include "main.h"
+
 /**
  * print_version - print the version of Elf header
  * @e_ident: pointer to arr containes elf magic numbers
  * Return: void
  */
-void print_version(unsigned char *e_ident)
+__home void print_version(unsigned char *e_ident)
 {
 	printf("  Version:                           %d", e_ident[EI_VERSION]);
 
@@ -24,7 +28,7 @@ void print_version(unsigned char *e_ident)
  * @e_ident: pointer to arr containes elf magic numbers
  * Return: void
  */
-void print_osabi(unsigned char *e_ident)
+__home void print_osabi(unsigned char *e_ident)
 {
 	printf("  OS/ABI:                            ");
 
@@ -70,7 +74,7 @@ void print_osabi(unsigned char *e_ident)
  * @e_ident: pointer to arr containes elf magic numbers
  * Return: void
  */
-void print_abi(unsigned char *e_ident)
+__home void print_abi(unsigned char *e_ident)
 {
 	printf("  ABI Version:                       %d\n", e_ident[EI_ABIVERSION]);
 }
@@ -81,7 +85,7 @@ void print_abi(unsigned char *e_ident)
  * @e_ident: pointer to arr containes elf class
  * Return: void
  */
-void print_type(unsigned int e_type, unsigned char *e_ident)
+__home void print_type(unsigned int e_type, unsigned char *e_ident)
 {
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 		e_type >>= 8;
@@ -116,7 +120,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
  * Return: void
  */
 
-void close_elf(int elf)
+__home void close_elf(int elf)
 {
 	if (close(elf) == -1)
 	{
@@ -124,3 +128,4 @@ void close_elf(int elf)
 		exit(98);
 	}
 }
+#endif

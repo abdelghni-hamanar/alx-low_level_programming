@@ -1,10 +1,13 @@
+#ifndef UTILS_H
+#define UTILS_H
+
 #include "main.h"
 /**
  * check_elf - check if file is elf
  * @e_ident: pointer to arr containes elf magic numbers
  * Return: void
  */
-void check_elf(unsigned char *e_ident)
+__home void check_elf(unsigned char *e_ident)
 {
 	int i;
 
@@ -24,7 +27,7 @@ void check_elf(unsigned char *e_ident)
  * @e_ident: pointer to arr containes elf magic numbers
  * Return: void
  */
-void print_magic(unsigned char *e_ident)
+__home void print_magic(unsigned char *e_ident)
 {
 	int i;
 
@@ -45,7 +48,7 @@ void print_magic(unsigned char *e_ident)
  * @e_ident: pointer to arr containes elf magic numbers
  * Return: void
  */
-void print_class(unsigned char *e_ident)
+__home void print_class(unsigned char *e_ident)
 {
 	printf("  Class:                             ");
 
@@ -69,7 +72,7 @@ void print_class(unsigned char *e_ident)
  * @e_ident: pointer to arr containes elf magic numbers
  * Return: void
  */
-void print_data(unsigned  char *e_ident)
+__home void print_data(unsigned  char *e_ident)
 {
 	printf("  Data:                              ");
 
@@ -94,7 +97,7 @@ void print_data(unsigned  char *e_ident)
  * @e_ident: pointer to arr containes elf class
  * Return: void
  */
-void print_entry(unsigned long int e_entry, unsigned char *e_ident)
+__home void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
 	printf("  Entry point address:               ");
 
@@ -109,3 +112,5 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 	else
 		printf("%#lx\n", e_entry);
 }
+
+#endif
