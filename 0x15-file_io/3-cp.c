@@ -1,7 +1,41 @@
 #include "main.h"
+/**
+ * close_file - close file
+ * @f: file to close
+ * Return: void
+ */
 
-char *create_buffer(char *f);
-void close_file(int f);
+void close_file(int f)
+{
+	int c;
+
+	c = close(f);
+	if (c == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close f %d\n", f);
+		exit(100);
+	}
+}
+/**
+ * create_buffer - close file
+ * @f: file to create
+ * Return: buffer
+ */
+
+char *create_buffer(char *f)
+{
+	char *buffer;
+
+	buffer = malloc(sizeof(char) * 1024);
+
+	if (buffer == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", f);
+		exit(99);
+	}
+
+	return (buffer);
+}
 
 /* By Abdelghni Hamanar */
 /**
@@ -25,7 +59,7 @@ int main(int argc, char *argv[])
 	buffer = create_buffer(argv[2]);
 	fr = open(argv[1], O_RDONLY);
 	r = read(fr, buffer, 1024);
-	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0604);
+	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
 		if (fr == -1 || r  == -1)
@@ -34,16 +68,13 @@ int main(int argc, char *argv[])
 			free(buffer);
 			exit(98);
 		}
-
 		w = write(to, buffer, r);
-
 		if (to == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buffer);
 			exit(99);
 		}
-
 		r = read(fr, buffer, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
 
@@ -52,46 +83,5 @@ int main(int argc, char *argv[])
 	free(buffer);
 	close_file(fr);
 	close_file(to);
-
-
 	return (0);
-}
-
-/**
- * close_file - close file
- * @f: file to close
- * Return: void
-*/
-
-void close_file(int f)
-{
-	int c;
-
-	c = close(f);
-	if (c == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close f %d\n", f);
-		exit(100);
-	}
-}
-
-/**
- * create_buffer - close file
- * @f: file to create
- * Return: buffer
-*/
-
-char *create_buffer(char *f)
-{
-	char *buffer;
-
-	buffer = malloc(sizeof(char) * 1024);
-
-	if (buffer == NULL)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", f);
-		exit(99);
-	}
-
-	return (buffer);
 }
