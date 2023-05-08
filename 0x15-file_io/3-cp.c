@@ -1,28 +1,29 @@
 #include "main.h"
 /**
  * close_file - close file
- * @f: file to close
+ * @fd: file to close
  * Return: void
  */
 
-void close_file(int f)
+void close_file(int fd)
 {
 	int c;
 
-	c = close(f);
+	c = close(fd);
+
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close f %d\n", f);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
 /**
  * create_buffer - close file
- * @f: file to create
+ * @file: file to create
  * Return: buffer
  */
 
-char *create_buffer(char *f)
+char *create_buffer(char *file)
 {
 	char *buffer;
 
@@ -30,7 +31,7 @@ char *create_buffer(char *f)
 
 	if (buffer == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", f);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
 		exit(99);
 	}
 
